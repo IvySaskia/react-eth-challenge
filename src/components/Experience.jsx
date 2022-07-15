@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Experience extends Component {
-  render() {
-    return (
+const Experience = ({}) => {
+
+  return (
+    <div>
+      <h1 className='Experience-title'>Experience</h1>
       <div>
-        <h1 className='Experience-title'>Experience-title</h1>
-        <div>
-          <ul>
-            <li className='Experience-item'>Experience-item</li>
-            <li className='Experience-item'>Experience-item</li>
-            <li className='Experience-item'>Experience-item</li>
-          </ul>
-        </div>
+        <ul>
+          <li className='Experience-item'>Experience-item</li>
+          <li className='Experience-item'>Experience-item</li>
+          <li className='Experience-item'>Experience-item</li>
+        </ul>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Experience;

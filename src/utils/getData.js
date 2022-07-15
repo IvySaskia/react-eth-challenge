@@ -1,8 +1,7 @@
 const getData = (url) => {
   if (!url) return 'No url was provided';
   return fetch(url)
-    .then((res) => res.json())
-    .catch((error) => { console.error('There was an error!', error); });
+    .then((res) => res.json());
 };
 
 export default getData;

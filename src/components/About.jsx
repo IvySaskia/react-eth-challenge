@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class About extends Component {
-  render() {
-    return (
+const About = ({address, email, phone, website}) => {
+
+  return (
+    <div>
+      <h1 className='About-title'>About Me</h1>
       <div>
-        <h1 className='About-title'>About-title</h1>
-        <div>
-          <ul>
-            <li className='About-item'>About-phone</li>
-            <li className='About-item'>About-email</li>
-            <li className='About-item'>About-wesite</li>
-            <li className='About-item'>About-address</li>
-          </ul>
-        </div>
+        <ul>
+          <li className='About-item'>{phone}</li>
+          <li className='About-item'>{email}</li>
+          <li className='About-item'>{website}</li>
+          <li className='About-item'>{address}</li>
+        </ul>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default About;
