@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-// import '../styles/components/App.styl';
 import { useDispatch, useSelector } from 'react-redux';
 import Header from '../components/Header';
 import About from '../components/About';
@@ -14,15 +13,21 @@ import Certificate from '../components/Certificate';
 
 import {
   retrieveCurriculumVitae,
+  curriculumVitae
 } from '../store/curriculumVitae/curriculumVitaeSlice';
+
+import {
+  getTheme
+} from '../store/application/aplicationSlice';
 
 const App = () => {
   const dispatch = useDispatch();
-  const { cv, loading, error } = useSelector(state => state.curriculumVitae);
+  const { cv, loading, error } = useSelector(curriculumVitae);
   const { name, profession, address, email, website, phone, avatar, profile, certificate, academic, experience, skills, interest, languages, social } = cv;
   
   useEffect(() => {
     dispatch(retrieveCurriculumVitae())
+    dispatch(getTheme())
   }, []);
 
   if (error) {
@@ -35,29 +40,28 @@ const App = () => {
 
   return (
     <>
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-      <Header 
-        avatar={avatar} 
-        name = {name} 
-        profession={profession} >
-        <About 
-          address={address}
-          email={email}
-          phone={phone}
-          website={website} />
-      </Header>
-      <Profile profile={profile} />
-      <Experience 
-        experience={experience} 
-        certificate={certificate}/>
-      <Certificate certificate={certificate}/>
-      <Academic academic={academic} />
-      <Skills skills={skills} />
-      <Interest interest={interest} />
-      <Languages languages={languages} />
-      <Social social={social} />
+      <div className='bg-homeBg min-h-screen  dark:bg-homeBg-dark bg-no-repeat bg-center bg-cover bg-fixed  md:pb-16 w-full'>
+        <Header 
+          avatar={avatar} 
+          name = {name} 
+          profession={profession} >
+          <About 
+            address={address}
+            email={email}
+            phone={phone}
+            website={website} />
+        </Header>
+        <Profile profile={profile} />
+        <Experience 
+          experience={experience} 
+          certificate={certificate}/>
+        <Certificate certificate={certificate}/>
+        <Academic academic={academic} />
+        <Skills skills={skills} />
+        <Interest interest={interest} />
+        <Languages languages={languages} />
+        <Social social={social} />
+      </div>
     </>
   )
 };

@@ -39,6 +39,8 @@ module.exports = {
           'postcss-loader',
         ],
       },
+      {   test: /\.(jpg|png|svg)$/, 
+            type: 'asset/resource', }
     ],
   },
   devServer: {

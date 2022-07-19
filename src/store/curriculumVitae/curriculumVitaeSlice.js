@@ -18,7 +18,7 @@ const initialState = {
 };
 
 const curriculumVitaeSlice = createSlice({
-  name: 'CurriculumVitae',
+  name: 'curriculumVitae',
   initialState,
   extraReducers: {
     [retrieveCurriculumVitae.pending]: (state, action) => {
@@ -46,6 +46,8 @@ const curriculumVitaeSlice = createSlice({
     },
   },
 });
+
+export const curriculumVitae = (state) => state.curriculumVitae;
 
 const { reducer } = curriculumVitaeSlice;
 export default reducer;
