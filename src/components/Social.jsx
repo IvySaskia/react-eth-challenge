@@ -1,16 +1,23 @@
 import React from 'react';
+import getIcon from '../utils/getIcon';
 
-const Social = ({}) => {
+const Social = ({social}) => {
   return (
-    <div>
-      <h1 className='Social-title'>Social-title</h1>
-      <div>
-        <ul>
-          <li className='Social-item'>Social-item</li>
-          <li className='Social-item'>Social-item</li>
-          <li className='Social-item'>Social-item</li>
-        </ul>
-      </div>
+    <div className="flex justify-center space-x-3">
+      {social?.map((item, i) => {
+        const { color, icon} = getIcon(item.name);
+
+        return  <a
+        href={item.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        key={i}
+      >
+        <span style={{ color: `${color}` }} className="socialbtn">
+          {icon}
+        </span>
+      </a>
+      })}
     </div>
   );
 };

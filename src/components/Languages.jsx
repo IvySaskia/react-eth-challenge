@@ -1,18 +1,23 @@
 import React from 'react';
+import LineItem from "./LineItem";
 
-const Languages = ({}) => {
+import { lineColors } from '../constants/Resources';
+
+const Languages = ({languages, local}) => {
 
   return (
-    <div>
-      <h1 className='Languages-title'>Languages-title</h1>
-      <div>
-        <ul>
-          <li className='Languages-item'>Languages-item</li>
-          <li className='Languages-item'>Languages-item</li>
-          <li className='Languages-item'>Languages-item</li>
-        </ul>
-      </div>
-    </div>
+  <div className="col-span-1 Languages-title">
+                  <h4 className="text-5xl dark:text-white font-medium mb-6 Languages-item">
+                  Languages          </h4>
+                  <div className="Languages-item"><div className="Languages-item">
+
+          {languages?.map((item, i) => {
+            let language = Object.assign({},item);
+            language.color = lineColors[i].color;
+            return <LineItem item={language} local={local} key={i} />
+          })}
+                  </div>
+                  </div></div>
   );
 };
 

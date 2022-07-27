@@ -34,9 +34,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         homeBg: "url('/src/assets/images/background/bg.jpg')",
-        "homeBg-dark": "url('/src/assets/images/background/bg-dark.jpg')",
-        "homeTwoBg-dark": "url('/src/assets/images/background/bgtwo.jpg')",
-        previewBg: "url('/src/assets/images/preview/previewbg.png')",
+        "homeBg-dark": "url('/src/assets/images/background/bgtwo.jpg')",
       },
       colors: {
         gray: "#F3F6F6",
@@ -57,7 +55,7 @@ module.exports = {
         "color-820": "#8774FF",
         "color-830": "#FF75D8",
         "color-840": "#FF6786",
-        // dart-color
+
         "color-910": "#A6A6A6",
         "color-920": "#1D1D1D",
         "color-930": "#FF6464",

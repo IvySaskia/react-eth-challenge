@@ -1,6 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// import getData from '../../utils/getData';
-// import { CV_API_URL } from '../../constants/Environment';
 import data from '../../../data.json';
 
 export const retrieveCurriculumVitae = createAsyncThunk(
@@ -41,7 +39,6 @@ const curriculumVitaeSlice = createSlice({
         loading: false,
         cv: {},
         error: action.error,
-
       };
     },
   },

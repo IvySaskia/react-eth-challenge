@@ -5,9 +5,9 @@
     "address": "Cochabamba, Bolivia.",
     "email": "ivysaskia@gmail.com",
     "website": "https://example.com",
-    "phone": "+59170358490",
-    "avatar": "https://www.facebook.com/photo/?fbid=2355523434476525&set=a.148670191828538",
-    "profile": "I am passionate about technology and continuous learning with the goal of specializing to be a fullstack ethereum developer",
+    "phone": "+591 70358490",
+    "avatar": "https://scontent.flpb1-2.fna.fbcdn.net/v/t1.6435-9/48195645_2355523441143191_1417057779947929600_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=7Fe3vNEQR5oAX8vFYbd&_nc_ht=scontent.flpb1-2.fna&oh=00_AT8GiqTPoq26pjOmKutUFAmReEmcFNw3R3m3dksUfA6ZKg&oe=62FEAC52",
+    "profile": "I am a Systems Engineering student and FullStack Ethereum Developer from Cochabamba, Bolivia, working in web development. I enjoy learning technologies that help me develop solutions to complex problems. And so, give a technological product that solves and helps society to make a change. \n My goal is to build solutions to any problem while learning on the way to grow professionally and personally. Recently, I joined the world of blockchain, Ethereum. I really like volunteering because it allows me to get to know myself and grow in any field. \n       ",
     "certificate": [
       {
         "date": "Feb 2018",
@@ -64,19 +64,19 @@
     "skills": [
       {
         "name": "HTML5",
-        "percentage": "75%"
+        "percentage": "75"
       },
       {
         "name": "CSS",
-        "percentage": "55%"
+        "percentage": "55"
       },
       {
         "name": "JavaScript",
-        "percentage": "75%"
+        "percentage": "75"
       },
       {
         "name": "React",
-        "percentage": "90%"
+        "percentage": "90"
       }
     ],
     "interest": [
@@ -88,11 +88,11 @@
     "languages": [
       {
         "name": "Spanish - Native",
-        "percentage": "100%"
+        "percentage": "100"
       },
       {
-        "name": "English",
-        "percentage": "100%"
+        "name": "English - Proficient",
+        "percentage": "90"
       }
     ],
     "social": [
