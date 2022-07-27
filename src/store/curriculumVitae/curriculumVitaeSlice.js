@@ -1,11 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { CV_API_URL } from '../../constants/Environment';
+import getData from '../../utils/getData';
 import data from '../../../data.json';
 
 export const retrieveCurriculumVitae = createAsyncThunk(
   'tutorials/retrieve',
   async () => {
-    // return getData(CV_API_URL);
-    return data;
+    return getData(CV_API_URL);
   },
 );
 
@@ -31,15 +32,22 @@ const curriculumVitaeSlice = createSlice({
         ...state,
         loading: false,
         cv: action.payload.data,
+        error: null,
       };
     },
     [retrieveCurriculumVitae.rejected]: (state, action) => {
       return {
         ...state,
         loading: false,
-        cv: {},
-        error: action.error,
+        cv: data.data,
+        error: null,
       };
+      // return {
+      //   ...state,
+      //   loading: false,
+      //   cv: {},
+      //   error: action.error,
+      // };
     },
   },
 });
